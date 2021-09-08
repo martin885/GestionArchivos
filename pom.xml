@@ -6,7 +6,7 @@
 	<artifactId>GestionArchivosEE</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Gestion Archivos Maven Webapp</name>
+	<name>Gestion Archivos EE</name>
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
