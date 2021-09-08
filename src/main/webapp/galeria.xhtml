@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<div class="card">
+		<p:galleria value="#{gestionBean.archivos}" var="archivo"
+			showCaption="true">
+			<p:graphicImage
+				name="/#{request.contextPath}/files/#{archivo.nombre}"
+				alt="Image Description for #{archivo.nombre}"
+				title="#{archivo.nombre}" />
+		</p:galleria>
+	
+
+	</div>
+</h:body>
+</html>

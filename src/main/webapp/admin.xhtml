@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<h:head></h:head>
+<h:body>
+	<ui:composition template="./WEB-INF/plantilla/lista.xhtml">
+		<ui:define name="upload">
+			<div class="card">
+				<h:form id="uploadForm" name="uForm" enctype="multipart/form-data"
+					update=":myForm:myTable">
+					<fieldset>
+						<legend>Formulario de subida</legend>
+
+						<p:fileUpload value="#{gestionBean.files}" mode="simple"
+							skinSimple="true" multiple="true" />
+						<br></br> <br></br>
+						<p:commandButton value="Submit" ajax="false"
+							action="#{gestionBean.agregarArchivos}"
+							styleClass="p-mt-3 ui-button-outlined p-d-block" />
+
+					</fieldset>
+				</h:form>
+				<c:set target="#{gestionBean}" property="logged" value="#{true}" />
+
+			</div>
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>
